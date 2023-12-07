@@ -1,73 +1,33 @@
 <div class="container-fluid">
   <div>
-    <div class=" mx-auto gap-3 justify-content-center align-items-center row my-5">
-      <p class="text-light text-center">
+    <div class="mx-auto gap-3 justify-content-center align-items-center row my-5">
+      <p class="equip_title text-center text-uppercase fw-bold" style="color:#66FCF1">
         Equipments
       </p>
+      <p class="mt-4 text-center" style="color:#C5C6C7">
+        Explore our diverse collection of cutting-edge equipment, meticulously designed and crafted to meet the highest standards. Each piece is a testament to innovation and functionality,
+      </p>
+      <p class="mb-4 text-center" style="color:#C5C6C7">
+        providing you with the tools you need for success. Discover the intricate details and features that make our equipment stand out. Your journey to excellence begins here.
+      </p>
+
     </div>
-    <div class="mx-auto gap-3 justify-content-center align-items-center row my-5">
+    <div *ngIf="equipments && equipments.length > 0">
+      <div *ngFor="let equipment of equipments" class="mx-auto gap-3 justify-content-center align-items-center row my-5">
       <div class="col-md-2 col-lg-2 mb-3">
         <div class="card border-0 bg-transparent" >
           <a href="#"> <img class="card-img-top img-fluid" src="./assets/img/equipments/KOMATSU-D37EX-24.jpg" alt="Equipment image" style="max-height: 220px" /> </a>
           <div class="card-body p-3">
-            <h5 class="card-title mt-2 mb-3" style="color: #C3C6E2">Equipment Name</h5>
-            <p class="card-text text-truncate mb-3" style="color: #A8AABC">Equipment Family</p>
+            <h5 class="card-title mt-2 mb-3" style="color: #C5C6C7">{{ equipment.name }}</h5>
+            <p class="card-text text-truncate mb-3" style="color: #C5C6C7">{{ equipmentFamilies[equipment.equipmentFamilyId] }}</p>
             <div class="d-flex align-items-center justify-content-between">
-              <a href="#" class="btn btn-success border-0 w-100" style="color: #2f3349 !important; background-color: #C3C6E2 !important;"> Explore</a>
+              <a href="" class="btn btn-outline-light  w-100" style=""> Explore</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-2 col-lg-2 mb-3">
-        <div class="card border-0 bg-transparent" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
-          <a href="#"> <img class="card-img-top img-fluid" src="./assets/img/equipments/KOMATSU-D39EX-24.jpg" alt="Event image"  style="max-height: 220px" /> </a>
-          <div class="card-body p-3">
-            <h5 class="card-title mt-2 mb-3" style="color: #C3C6E2">Equipment Name </h5>
-            <p class="card-text text-truncate mb-3" style="color: #A8AABC">Equipment Family</p>
 
-            <div class="d-flex align-items-center ">
-              <a href="#" class="btn btn-success border-0 w-100" style="color: #2f3349 !important; background-color: #C3C6E2 !important;"> Explore</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2 col-lg-2 mb-3">
-        <div class="card border-0 bg-transparent" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
-          <a href="#"> <img class="card-img-top img-fluid" src="./assets/img/equipments/KOMATSU-PC30MR-5.jpg" alt="Event image"  style="max-height: 220px" /> </a>
-          <div class="card-body p-3">
-            <h5 class="card-title mt-2 mb-3" style="color: #C3C6E2">Equipment Name </h5>
-            <p class="card-text text-truncate mb-3" style="color: #A8AABC">Equipment Family</p>
-            <div class="d-flex align-items-center justify-content-between">
-              <a href="#" class="btn btn-success border-0 w-100" style="color: #2f3349 !important; background-color: #C3C6E2 !important;"> Explore</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2 col-lg-2 mb-3">
-        <div class="card border-0 bg-transparent" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
-          <a href="#"> <img class="card-img-top img-fluid" src="./assets/img/equipments/dynapac-CO4200VI.jpg" alt="Event image"  style="max-height: 220px" /> </a>
-          <div class="card-body p-3">
-            <h5 class="card-title mt-2 mb-3" style="color: #C3C6E2">Equipment Name </h5>
-            <p class="card-text text-truncate mb-3" style="color: #A8AABC">Equipment Family</p>
-            <div class="d-flex align-items-center ">
-              <a href="#" class="btn btn-success border-0 w-100" style="color: #2f3349 !important; background-color: #C3C6E2 !important;"> Explore</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2 col-lg-2 mb-3">
-        <div class="card border-0 bg-transparent" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
-          <a href="#"> <img class="card-img-top img-fluid" src="./assets/img/equipments/dynapac-CA1400D.jpg" alt="Event image"  style="max-height: 220px" /> </a>
-          <div class="card-body p-3">
-            <h5 class="card-title mt-2 mb-3" style="color: #C3C6E2">Equipment Name </h5>
-            <p class="card-text text-truncate mb-3" style="color: #A8AABC">Equipment Family</p>
-            <div class="d-flex align-items-center w-100">
-              <a href="#" class="btn btn-success border-0 w-100" style="color: #2f3349 !important; background-color: #C3C6E2 !important;"> Explore</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-
+    </div>
   </div>
 </div>
